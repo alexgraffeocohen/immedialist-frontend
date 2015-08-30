@@ -23,6 +23,6 @@ export default Ember.Controller.extend({
     }
   },
   clearNameFromForm() {
-    this.set('name', '');
+    this.set('model.name', '');
   },
 });
