@@ -25,4 +25,15 @@ export default Ember.Controller.extend({
   clearNameFromForm() {
     this.set('model.name', '');
   },
+  optionsForSelect: [
+    "Movie",
+    "Show",
+    "Actor",
+    "Director",
+    "Song",
+    "Album",
+    "Artist",
+    "Book",
+    "Author"
+  ]
 });
