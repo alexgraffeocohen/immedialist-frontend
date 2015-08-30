@@ -17,9 +17,7 @@ export default Ember.Controller.extend({
     // TODO: why does emberx-select not set whatever the default value of the
     // select is on initial load?
     if(this.get('model.mediaName') === undefined) {
-      // TODO: try to have this not break if the first option in the select
-      // changes independently
-      this.set('model.mediaName', 'movie');
+      this.set('model.mediaName', this.get('optionsForSelect')[0]);
     }
   },
   clearNameFromForm() {
