@@ -1,0 +1,58 @@
+$show-base-bg: #E8E1F5;
+$show-text-color: #5D5193;
+
+$movie-base-bg: #d9edf7;
+$movie-text-color: #31708f;
+
+$book-base-bg: #f2dede;
+$book-text-color: #a94442;
+
+$music-base-bg: #dff0d8;
+$music-text-color: #3c763d;
+
+$person-base-bg: #fcf8e3;
+$person-text-color: #8a6d3b;
+
+@mixin list-item-variant($bg-color, $text-color) {
+  background-color: $bg-color;
+  color: $text-color;
+  &:hover {
+    background-color: darken($bg-color, 5%);
+    color: $text-color;
+  }
+  &:focus {
+    background-color: darken($bg-color, 5%);
+    color: $text-color;
+  }
+}
+
+.list-item__icon {
+  padding-right: 10px;
+}
+
+.list-item__name {
+  font-size: 1.25em;
+}
+
+.list-item__detail {
+  padding: 15px;
+  margin-top: 10px;
+}
+
+.list-group {
+  .show {
+    @include list-item-variant($show-base-bg, $show-text-color)
+  }
+  .movie {
+    @include list-item-variant($movie-base-bg, $movie-text-color)
+  }
+  .book {
+    @include list-item-variant($book-base-bg, $book-text-color)
+  }
+  .song, .album {
+    @include list-item-variant($music-base-bg, $music-text-color)
+  }
+  .actor, .director, .artist, .author {
+    @include list-item-variant($person-base-bg, $person-text-color)
+  }
+}
