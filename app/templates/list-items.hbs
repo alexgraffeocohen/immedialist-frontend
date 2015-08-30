@@ -1,23 +1,6 @@
 <section id="list-items">
   <div class="row">
-    <form action="#" class="create form-inline text-center">
-      <div class="form-group">
-        <select class="form-control">
-          <option value="movie">Movie</option>
-          <option value="actor">Actor</option>
-          <option value="director">Director</option>
-          <option value="song">Song</option>
-          <option value="album">Album</option>
-          <option value="artist">Artist</option>
-          <option value="book">Book</option>
-          <option value="author">Author</option>
-        </select>
-        <input type="text" class="form-control" placeholder="enter item" id="list-item-name">
-      </div>
-      <div class="form-group">
-      </div>
-      <input type="submit" class="btn btn-default" value="Add To List">
-    </form>
+    {{outlet "new"}}
   </div>
 
   <div class="row">
