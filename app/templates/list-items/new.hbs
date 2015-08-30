@@ -1,6 +1,6 @@
 <form {{action "save" on="submit"}} class="create form-inline text-center">
   <div class="form-group">
-    {{#x-select value=mediaType class="form-control" action="selectMediaType"}}
+    {{#x-select value=model.mediaName class="form-control"}}
       {{#x-option value="movie"}}Movie{{/x-option}}
       {{#x-option value="actor"}}Actor{{/x-option}}
       {{#x-option value="director"}}Director{{/x-option}}
@@ -10,7 +10,7 @@
       {{#x-option value="book"}}Book{{/x-option}}
       {{#x-option value="author"}}Author{{/x-option}}
     {{/x-select}}
-    {{input value=name class="form-control" placeholder="enter item" id="list-item-name"}}
+    {{input value=model.name class="form-control" placeholder="enter item" id="list-item-name"}}
   </div>
   <div class="form-group">
   </div>
