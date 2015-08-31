@@ -34,11 +34,6 @@ $person-text-color: #8a6d3b;
   font-size: 1.25em;
 }
 
-.list-item__detail {
-  padding: 15px;
-  margin-top: 10px;
-}
-
 .list-group {
   .show {
     @include list-item-variant($show-base-bg, $show-text-color)

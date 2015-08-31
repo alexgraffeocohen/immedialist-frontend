@@ -16,9 +16,6 @@ export default Ember.Component.extend({
   itemName: function() {
     return this.get('listItem.name').dasherize();
   }.property('listItem'),
-  itemDOMID: function() {
-    return "#" + this.get('itemName');
-  }.property('listItem'),
   typeIcon: function() {
     var iconNameGenerator = IconNameGenerator.create({
       listItem: this.get('listItem')
