@@ -1,1 +1,15 @@
-<p>{{listItem.name}}</p>
+<a href="#" class="list-item list-group-item {{mediaType}} {{itemName}}"
+  data-toggle="collapse" data-target="{{itemDOMID}}">
+  <i class="list-item__icon fa fa-2x fa-fw {{typeIcon}}"></i>
+  <span class="list-item__name">{{listItem.name}}</span>
+  <button type="button" class="close" aria-label="Close" id="list-item-delete" {{action "deleteListItem"}}>
+    <span aria-hidden="true">&times;</span>
+  </button>
+  <div id="{{itemName}}" class="collapse">
+    {{#if listItem.resolved}}
+      <p class="list-item__detail">resolved!</p>
+    {{else}}
+      <p class="list-item__detail">not resolved!</p>
+    {{/if}}
+  </div>
+</a>
