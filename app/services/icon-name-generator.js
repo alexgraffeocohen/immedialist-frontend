@@ -3,6 +3,7 @@ import Ember from 'ember';
 export default Ember.Object.extend({
   call() {
     switch(this.get('listItem.mediaType')) {
+      // TODO: remove other "person" cases besides "creator"
       case "movie":
         return "fa-film";
       case "show":
