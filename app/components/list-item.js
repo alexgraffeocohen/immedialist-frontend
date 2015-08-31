@@ -1,4 +1,5 @@
 import Ember from 'ember';
+import IconNameGenerator from '../services/icon-name-generator';
 
 export default Ember.Component.extend({
   actions: {
@@ -19,25 +20,9 @@ export default Ember.Component.extend({
     return "#" + this.get('itemName');
   }.property('listItem'),
   typeIcon: function() {
-    switch(this.get('listItem.mediaType')) {
-      case "movie":
-        return "fa-film";
-      case "show":
-        return "fa-video-camera";
-      case "actor":
-        return "fa-user";
-      case "director":
-        return "fa-user";
-      case "author":
-        return "fa-user";
-      case "artist":
-        return "fa-user";
-      case "song":
-        return "fa-music";
-      case "album":
-        return "fa-music";
-      case "book":
-        return "fa-book";
-    }
+    var iconNameGenerator = IconNameGenerator.create({
+      listItem: this.get('listItem')
+    });
+    return iconNameGenerator.call();
   }.property('listItem')
 });
