@@ -13,6 +13,8 @@ export default Ember.Object.extend({
         return "fa-user";
       case "author":
         return "fa-user";
+      case "creator":
+        return "fa-user";
       case "artist":
         return "fa-user";
       case "song":

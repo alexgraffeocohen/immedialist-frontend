@@ -52,7 +52,7 @@ $person-text-color: #8a6d3b;
   .song, .album {
     @include list-item-variant($music-base-bg, $music-text-color)
   }
-  .actor, .director, .artist, .author {
+  .actor, .director, .artist, .author, .creator {
     @include list-item-variant($person-base-bg, $person-text-color)
   }
 }
