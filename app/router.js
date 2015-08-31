@@ -7,6 +7,7 @@ var Router = Ember.Router.extend({
 
 Router.map(function() {
   this.route('listItems', { path: '/' }, function(){
+    this.route('listItem', { path: ':listitem_id' });
   });
 });
 
