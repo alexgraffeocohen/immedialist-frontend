@@ -1,9 +1,4 @@
-{{#if model.resolved}}
-  <h3 class="text-center">{{model.name}}</h3>
-  {{component componentName item=model.item}}
-{{else}}
-  {{search-results}}
-{{/if}}
+{{outlet 'show'}}
 <div class="text-center">
   {{#link-to 'listItems'}}Back to List{{/link-to}}
 </div>
