@@ -1,1 +1,5 @@
-{{search-results search=model.search}}
+{{#search-results search=model.search as |itemOption|}}
+  <div class="col-md-6">
+    {{component (concat itemOption.mediaType '-card') item=itemOption}}
+  </div>
+{{/search-results}}
