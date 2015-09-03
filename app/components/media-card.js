@@ -5,5 +5,6 @@ export default Ember.Component.extend({
     selectItem() {
       this.sendAction('action', this.get('item'));
     }
-  }
+  },
+  charCountForTitle: 35
 });
