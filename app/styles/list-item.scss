@@ -50,9 +50,7 @@ $person-text-color: #8a6d3b;
   .album .list-item {
     @include list-item-variant($music-base-bg, $music-text-color)
   }
-  // TODO: remove other types besides creator; this will break because
-  // selectors of this style don't work
-  .actor, .director, .artist, .author, .creator .list-item {
+  .creator .list-item {
     @include list-item-variant($person-base-bg, $person-text-color)
   }
 }
