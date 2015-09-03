@@ -2,7 +2,11 @@
   <div class="panel-heading">
     <h3 class="panel-title">
       {{item.name}}
-      <i class="panel-title fa fa-check-circle fa-lg fa-fw fa-pull-right"></i>
+      <div class="pull-right">
+        <a href="#" {{action 'selectItem'}}>
+          <i class="fa fa-check-circle fa-lg fa-fw"></i>
+        </a>
+      </div>
     </h3>
   </div>
   <div class="panel-body">
