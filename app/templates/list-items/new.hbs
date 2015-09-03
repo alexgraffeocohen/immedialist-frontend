@@ -1,6 +1,6 @@
 <form {{action "save" on="submit"}} class="create form-inline text-center">
   <div class="form-group">
-    {{#x-select value=model.mediaName class="form-control"}}
+    {{#x-select value=model.requestedType class="form-control"}}
       {{#each optionsForSelect as |option|}}
         {{#x-option value=option}}{{option}}{{/x-option}}
       {{/each}}
