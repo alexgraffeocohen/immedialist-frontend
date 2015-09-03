@@ -1,7 +1,7 @@
 <div class="panel panel-default">
   <div class="panel-heading">
     <h3 class="panel-title">
-      {{item.name}}
+      {{truncate-text item.name charCount=35}}
       <div class="pull-right">
         <a href="#" {{action 'selectItem'}}>
           <i class="fa fa-check-circle fa-lg fa-fw"></i>
