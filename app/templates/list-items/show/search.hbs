@@ -1,5 +1,5 @@
-{{#search-results search=model.search as |option|}}
+{{#search-results search=model.search searchType=model.item.requestedType as |option searchType|}}
   <div class="col-md-6">
-    {{component (concat option.mediaType '-option') option=option}}
+    {{component (concat searchType '-option') option=option}}
   </div>
 {{/search-results}}

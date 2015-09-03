@@ -6,7 +6,7 @@ export default Ember.Component.extend({
     return this.get('search.items');
   }.property('search'),
   helpText: function() {
-    var text = `Select the Correct ${this.get('search.mediaType').capitalize()}`;
+    var text = `Select the Correct ${this.get('searchType').capitalize()}`;
     return text;
   }.property('search')
 });
