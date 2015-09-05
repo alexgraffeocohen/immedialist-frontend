@@ -1,17 +1,4 @@
-$show-base-bg: #E8E1F5;
-$show-text-color: #5D5193;
-
-$movie-base-bg: #d9edf7;
-$movie-text-color: #31708f;
-
-$book-base-bg: #f2dede;
-$book-text-color: #a94442;
-
-$music-base-bg: #dff0d8;
-$music-text-color: #3c763d;
-
-$person-base-bg: #fcf8e3;
-$person-text-color: #8a6d3b;
+@import 'media-colors';
 
 @mixin list-item-variant($bg-color, $text-color) {
   background-color: $bg-color;
