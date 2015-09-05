@@ -1,9 +1,15 @@
 import Ember from 'ember';
+import IconNameGenerator from '../../services/icon-name-generator';
 
 export default Ember.Route.extend({
   setupController(controller, model) {
+    var iconNameGenerator = IconNameGenerator.create({
+      listItem: model
+    });
+
     controller.set('model', model);
     controller.set('componentName', `${model.get('mediaType')}-detail`);
+    controller.set('typeIcon', iconNameGenerator.call());
   },
 
   renderTemplate(controller, model) {
