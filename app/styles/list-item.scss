@@ -13,31 +13,31 @@
   }
 }
 
-.list-item__icon {
+.list-items__item-icon {
   padding-right: 10px;
 }
 
-.list-item__name {
+.list-items__item-name {
   font-size: 1.25em;
 }
 
 .list-group {
-  .show .list-item {
+  .show .list-items__item {
     @include list-item-variant($show-base-bg, $show-text-color)
   }
-  .movie .list-item {
+  .movie .list-items__item {
     @include list-item-variant($movie-base-bg, $movie-text-color)
   }
-  .book .list-item {
+  .book .list-items__item {
     @include list-item-variant($book-base-bg, $book-text-color)
   }
-  .song .list-item {
+  .song .list-items__item {
     @include list-item-variant($music-base-bg, $music-text-color)
   }
-  .album .list-item {
+  .album .list-items__item {
     @include list-item-variant($music-base-bg, $music-text-color)
   }
-  .creator .list-item {
+  .creator .list-items__item {
     @include list-item-variant($person-base-bg, $person-text-color)
   }
 }

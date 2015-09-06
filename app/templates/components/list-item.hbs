@@ -1,7 +1,7 @@
 <div class="{{mediaType}}">
-  {{#link-to 'listItems.show' listItem class="list-item list-group-item"}}
-    <i class="list-item__icon fa fa-2x fa-fw {{typeIcon}}"></i>
-    <span class="list-item__name">{{listItem.name}}</span>
+  {{#link-to 'listItems.show' listItem class="list-items__item list-group-item"}}
+    <i class="list-items__item-icon fa fa-2x fa-fw {{typeIcon}}"></i>
+    <span class="list-items__item-name">{{listItem.name}}</span>
     <button type="button" class="close" aria-label="Close" id="list-item-delete" {{action "deleteListItem" bubbles=false}}>
       <span aria-hidden="true">&times;</span>
     </button>
