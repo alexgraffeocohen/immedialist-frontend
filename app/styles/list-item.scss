@@ -1,0 +1,25 @@
+@import 'media-colors';
+
+@mixin list-item-heading($bg-color, $text-color) {
+  background-color: $bg-color;
+  color: $text-color;
+}
+
+.list-item__heading.movie {
+  @include list-item-heading($movie-base-bg, $movie-text-color)
+}
+.list-item__heading.show {
+  @include list-item-heading($show-base-bg, $show-text-color)
+}
+.list-item__heading.book {
+  @include list-item-heading($book-base-bg, $book-text-color)
+}
+.list-item__heading.song {
+  @include list-item-heading($music-base-bg, $music-text-color)
+}
+.list-item__heading.album {
+  @include list-item-heading($music-base-bg, $music-text-color)
+}
+.list-item__heading.creator {
+  @include list-item-heading($person-base-bg, $person-text-color)
+}

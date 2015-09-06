@@ -10,6 +10,7 @@ export default Ember.Route.extend({
     controller.set('model', model);
     controller.set('componentName', `${model.get('mediaType')}-detail`);
     controller.set('typeIcon', iconNameGenerator.call());
+    controller.set('mediaType', model.get('mediaType').toLowerCase());
   },
 
   renderTemplate(controller, model) {
