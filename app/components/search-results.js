@@ -5,7 +5,8 @@ export default Ember.Component.extend({
     $('[data-toggle="tooltip"]').tooltip();
   },
   searchResults: function() {
-    return this.get('search.items');
+    let searchResultsMethod = `search.${this.get('search.mediaType')}s`
+    return this.get(searchResultsMethod);
   }.property('search'),
   helpText: function() {
     var text = `Select the Correct ${this.get('searchType').capitalize()}`;
