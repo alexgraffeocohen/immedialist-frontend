@@ -1,4 +1,4 @@
-import MediaOptionComponent from './media-option';
+import Ember from 'ember';
 
-export default MediaOptionComponent.extend({
+export default Ember.Component.extend({
 });
