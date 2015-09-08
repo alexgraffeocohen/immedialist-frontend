@@ -1,5 +1,4 @@
 import Ember from 'ember';
-import IconNameGenerator from '../services/icon-name-generator';
 
 export default Ember.Component.extend({
   actions: {
@@ -10,6 +9,7 @@ export default Ember.Component.extend({
     }
   },
 
+  iconNameGenerator: Ember.inject.service(),
   mediaType: function() {
     return this.get('listItem.mediaType').toLowerCase();
   }.property('listItem'),
@@ -17,9 +17,6 @@ export default Ember.Component.extend({
     return this.get('listItem.name').dasherize();
   }.property('listItem'),
   typeIcon: function() {
-    var iconNameGenerator = IconNameGenerator.create({
-      listItem: this.get('listItem')
-    });
-    return iconNameGenerator.call();
+    return this.get('iconNameGenerator').call(this.get('listItem'));
   }.property('listItem')
 });

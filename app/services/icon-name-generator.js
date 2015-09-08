@@ -1,8 +1,8 @@
 import Ember from 'ember';
 
-export default Ember.Object.extend({
-  call() {
-    switch(this.get('listItem.mediaType')) {
+export default Ember.Service.extend({
+  call(listItem) {
+    switch(listItem.get('mediaType')) {
       case "movie":
         return "fa-film";
       case "show":
