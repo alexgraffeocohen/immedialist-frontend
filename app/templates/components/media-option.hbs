@@ -1,3 +1,15 @@
-{{#media-card action="selectItem" item=option}}
-  {{yield}}
-{{/media-card}}
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title" data-toggle={{if cardTitleTooLong "tooltip"}} data-placement={{if cardTitleTooLong "top"}} title="{{option.name}}">
+      {{truncate-text option.name charCount=charCountForTitle}}
+      <div class="pull-right">
+        <a href="#" {{action 'selectItem'}}>
+          <i class="fa fa-check-circle fa-lg fa-fw"></i>
+        </a>
+      </div>
+    </h3>
+  </div>
+  <div class="panel-body">
+    {{yield}}
+  </div>
+</div>
