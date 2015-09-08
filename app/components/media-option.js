@@ -7,7 +7,7 @@ export default Ember.Component.extend({
     }
   },
   charCountForTitle: 35,
-  cardTitleTooLong: function() {
+  titleTooLong: function() {
     let nameLength = this.get('option.name').length
     let tooLong = nameLength > this.get('charCountForTitle');
     return tooLong

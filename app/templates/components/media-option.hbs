@@ -1,6 +1,6 @@
 <div class="panel panel-default">
   <div class="panel-heading">
-    <h3 class="panel-title" data-toggle={{if cardTitleTooLong "tooltip"}} data-placement={{if cardTitleTooLong "top"}} title="{{option.name}}">
+    <h3 class="panel-title" data-toggle={{if titleTooLong "tooltip"}} data-placement={{if titleTooLong "top"}} title="{{option.name}}">
       {{truncate-text option.name charCount=charCountForTitle}}
       <div class="pull-right">
         <a href="#" {{action 'selectItem'}}>
