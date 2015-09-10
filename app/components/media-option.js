@@ -3,7 +3,7 @@ import Ember from 'ember';
 export default Ember.Component.extend({
   actions: {
     selectItem() {
-      console.log(`in the media option component with ${this.get('option')}`);
+      this.sendAction('action', this.get('option'));
     }
   },
   charCountForTitle: 35,

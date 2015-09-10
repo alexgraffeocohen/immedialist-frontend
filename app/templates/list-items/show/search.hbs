@@ -1,6 +1,6 @@
 {{#search-results search=model.search searchType=model.item.requestedType as |option searchType|}}
   <div class="col-md-6">
-    {{#media-option option=option}}
+    {{#media-option option=option action="selectItem"}}
       {{component (concat searchType '-option') option=option}}
     {{/media-option}}
   </div>
