@@ -3,7 +3,7 @@ import Ember from 'ember';
 export default Ember.Controller.extend({
   actions: {
     save() {
-      this.setMediaNameIfNull()
+      this.setMediaNameIfNull();
       this.get('model').save().then((item) => {
         var listItem = this.store.createRecord(
           'listItem', {name: this.get('model.name'), item: item}

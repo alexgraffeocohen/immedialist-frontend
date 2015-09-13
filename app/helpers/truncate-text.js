@@ -2,11 +2,12 @@ import Ember from 'ember';
 
 export function truncateText(params, hash) {
   var text = params[0];
+  let charCount;
 
-  if(hash == undefined) {
-    var charCount = 30;
+  if(hash === undefined) {
+    charCount = 30;
   } else {
-    var charCount = Number(hash.charCount);
+    charCount = Number(hash.charCount);
   }
 
   if(text.length > charCount) {

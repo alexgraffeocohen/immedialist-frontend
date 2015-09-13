@@ -4,8 +4,8 @@ import { module, test } from 'qunit';
 module('Unit | Helper | truncate text');
 
 test('it should truncate text if text is longer than char count', function(assert) {
-  var text = "too long"
-  var charCount = 3
+  var text = "too long";
+  var charCount = 3;
 
   var result = truncateText([text], {charCount: charCount});
 
@@ -13,8 +13,8 @@ test('it should truncate text if text is longer than char count', function(asser
 });
 
 test('it should not truncate text if text is shorter than char count', function(assert) {
-  var text = "short"
-  var charCount = 10
+  var text = "short";
+  var charCount = 10;
 
   var result = truncateText([text], {charCount: charCount});
 
@@ -22,7 +22,7 @@ test('it should not truncate text if text is shorter than char count', function(
 });
 
 test('it truncates text to 30 characters if no char count is provided', function(assert) {
-  var text = "The Harvest Gypsies: On the Road to The Grapes"
+  var text = "The Harvest Gypsies: On the Road to The Grapes";
 
   var result = truncateText([text]);
 
