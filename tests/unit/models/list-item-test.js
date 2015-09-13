@@ -1,10 +1,21 @@
-import { moduleForModel, test } from 'ember-qunit';
+import Ember from 'ember';
+import FactoryGuy from 'ember-data-factory-guy';
+import startApp from '../../helpers/start-app';
+import { test } from 'ember-qunit';
 
-moduleForModel('list-item', 'Unit | Model | list item', {
-  needs: ['model:item', 'model:search']
+let App;
+
+module('ListItem', {
+  beforeEach: function() {
+    App = startApp();
+  },
+  afterEach: function() {
+    Ember.run(App, 'destroy');
+  }
 });
 
-test('it exists', function(assert) {
-  var model = this.subject();
-  assert.ok(!!model);
+test('it calculates mediaType from its item', function(assert) {
+  var item = FactoryGuy.make('item', {mediaType: 'movie'});
+  var listItem = FactoryGuy.make('list-item', {item: item});
+  assert.equal(listItem.get('mediaType'), 'movie');
 });
