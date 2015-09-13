@@ -1,12 +1,10 @@
 import { moduleForModel, test } from 'ember-qunit';
 
 moduleForModel('list-item', 'Unit | Model | list item', {
-  // Specify the other units that are required for this test.
-  needs: []
+  needs: ['model:item', 'model:search']
 });
 
 test('it exists', function(assert) {
   var model = this.subject();
-  // var store = this.store();
   assert.ok(!!model);
 });

@@ -6,21 +6,12 @@ moduleForComponent('movie-detail', 'Integration | Component | movie detail', {
 });
 
 test('it renders', function(assert) {
-  assert.expect(2);
+  assert.expect(1);
 
   // Set any properties with this.set('myProperty', 'value');
   // Handle any actions with this.on('myAction', function(val) { ... });
 
   this.render(hbs`{{movie-detail}}`);
 
-  assert.equal(this.$().text().trim(), '');
-
-  // Template block usage:
-  this.render(hbs`
-    {{#movie-detail}}
-      template block text
-    {{/movie-detail}}
-  `);
-
-  assert.equal(this.$().text().trim(), 'template block text');
+  assert.equal(this.$().text().trim(), "i'm in the movie component!");
 });
