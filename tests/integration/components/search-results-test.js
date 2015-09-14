@@ -1,26 +1,36 @@
 import { moduleForComponent, test } from 'ember-qunit';
+import Ember from 'ember';
+import FactoryGuy from 'ember-data-factory-guy';
+import startApp from '../../helpers/start-app';
 import hbs from 'htmlbars-inline-precompile';
 
+let App;
+
 moduleForComponent('search-results', 'Integration | Component | search results', {
-  integration: true
+  integration: true,
+  setup: function () {
+    Ember.run(function () {
+      App = startApp();
+    });
+  },
+  teardown: function () {
+    Ember.run(function () {
+      App.destroy();
+    });
+  }
 });
 
-test('it renders', function(assert) {
-  assert.expect(2);
+test('it renders helptext based on search type', function(assert) {
+  assert.expect(1);
 
   // Set any properties with this.set('myProperty', 'value');
   // Handle any actions with this.on('myAction', function(val) { ... });
 
-  this.render(hbs`{{search-results}}`);
+  this.set('searchType', "movie");
+  this.set('search', FactoryGuy.make('search'));
 
-  assert.equal(this.$().text().trim(), '');
+  this.render(hbs`{{search-results search=search searchType="movie"}}`);
 
-  // Template block usage:
-  this.render(hbs`
-    {{#search-results}}
-      template block text
-    {{/search-results}}
-  `);
-
-  assert.equal(this.$().text().trim(), 'template block text');
+  assert.equal(this.$('.text-center').text().trim(),
+               'Select the Correct Movie');
 });
