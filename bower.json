@@ -12,7 +12,10 @@
     "font-awesome": "fontawesome#~4.4.0",
     "jquery": "~2.1.4",
     "loader.js": "ember-cli/loader.js#3.2.1",
-    "qunit": "~1.18.0"
+    "qunit": "~1.18.0",
+    "pretender": "~0.9.0",
+    "lodash": "~3.7.0",
+    "Faker": "~3.0.0"
   },
   "devDependencies": {
     "bootstrap-sass": "bootstrap-sass-official#~3.3.5"
