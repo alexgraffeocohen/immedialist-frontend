@@ -1,30 +1,19 @@
 import { moduleForComponent, test } from 'ember-qunit';
-import Ember from 'ember';
-import FactoryGuy from 'ember-data-factory-guy';
-import startApp from '../../helpers/start-app';
 import hbs from 'htmlbars-inline-precompile';
-
-let App;
+import startMirage from '../../helpers/start-mirage';
 
 moduleForComponent('list-item', 'Integration | Component | list item', {
   integration: true,
   setup: function () {
-    Ember.run(function () {
-      App = startApp();
-    });
-  },
-  teardown: function () {
-    Ember.run(function () {
-      App.destroy();
-    });
+    startMirage(this.container);
   }
 });
 
 test('it renders content based on its item', function(assert) {
-  assert.expect(2);
+  //assert.expect(2);
 
-  var item = FactoryGuy.make('item', {mediaType: 'movie'});
-  var listItem = FactoryGuy.make('list-item', {item: item});
+  var item = server.create('item', {mediaType: 'movie'});
+  var listItem = server.create('list-item', {item_id: item.id});
 
   // Set any properties with this.set('myProperty', 'value');
   // Handle any actions with this.on('myAction', function(val) { ... });
