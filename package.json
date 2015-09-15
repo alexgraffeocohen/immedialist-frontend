@@ -40,7 +40,6 @@
     "ember-data": "2.0.0",
     "ember-disable-proxy-controllers": "^1.0.0",
     "ember-export-application-global": "^1.0.3",
-    "emberx-select": "2.0.1",
-    "jquery-mockjax": "2.0.1"
+    "emberx-select": "2.0.1"
   }
 }
