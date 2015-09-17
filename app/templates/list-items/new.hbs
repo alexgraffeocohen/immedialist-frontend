@@ -1,13 +1,13 @@
 <form {{action "save" on="submit"}} class="create-list-item form-inline text-center">
   <div class="form-group">
-    {{#x-select value=model.requestedType class="form-control"}}
+    {{#x-select value=model.requestedType class="form-control create-list-item__media-type"}}
       {{#each optionsForSelect as |option|}}
         {{#x-option value=option}}{{option}}{{/x-option}}
       {{/each}}
     {{/x-select}}
   </div>
   <div class="form-group">
-    {{input value=model.name class="form-control" placeholder="enter item" id="list-item-name"}}
+    {{input value=model.name class="form-control create-list-item__name" placeholder="enter item"}}
   </div>
-  <input type="submit" class="btn btn-default" value="Add To List">
+  <input type="submit" class="btn btn-default create-list-item__submit" value="Add To List">
 </form>
