@@ -1,4 +1,38 @@
 export default function() {
+  this.get('/list_items', function() {
+    return {
+      "movies": [
+        {"id": 1,"name": "Interstellar","media_type": "movie"},
+        {"id": 2,"name": "The Martian","media_type": "movie"}
+      ],
+      "list_items": [
+        {"id": 1,"name": "Interstellar","resolved": true,"item": {"type": "movie","id": 1},"search": null},
+        {"id": 2,"name": "The Martian","resolved": true,"item": {"type": "movie","id": 2},"search": null}
+      ]
+    };
+  });
+  this.get('/list_items/:id', function() {
+    return {
+      "movies": [
+        {"id": 1,"name": "Interstellar","media_type": "movie"}
+      ],
+      "list_item":
+        {"id": 1,"name": "Interstellar","resolved": true,"item": {"type": "movie","id": 1},"search": null}
+    };
+  });
+
+  this.get('/items/:id');
+
+  this.post('/requested_items', function(db, request) {
+    var params = JSON.parse(request.requestBody);
+
+    return db.requestedItems.insert(params);
+  });
+  this.post('/list_items', function(db, request) {
+    var params = JSON.parse(request.requestBody);
+
+    return db.listItems.insert(params);
+  });
 
   // These comments are here to help you get started. Feel free to delete them.
 
