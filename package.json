@@ -21,7 +21,7 @@
   "devDependencies": {
     "active-model-adapter": "2.0.0",
     "broccoli-asset-rev": "^2.2.0",
-    "broccoli-sass": "^0.6.6",
+    "broccoli-sass": "^0.7.0",
     "ember-cli": "1.13.13",
     "ember-cli-app-version": "^1.0.0",
     "ember-cli-babel": "^5.1.5",
